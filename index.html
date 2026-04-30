@@ -1,11 +1,11 @@
-<!-- Irene Wang 261096307 -->
+<!-- last modified April 2026 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMP307 Assignment 2</title>
+	<title>Home Candy Con</title>
 	
 	<!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,7 +15,7 @@
 	<!-- custom CSS -->
 	<link rel="stylesheet" href="style.css">
 	
-	<link rel="icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="assets/favicon.png">
 </head>
 
 <body>
@@ -29,9 +29,9 @@
 
     <nav class="main-menu">
 		<a href="https://www.anime-expo.org/programming/" target="_blank">Programming</a>
-		<a href="https://fanexpohq.com/exhibitors/" target="_blank">Exhibitors</a>
-		<a href="https://www.comiccon.org/contact/" target="_blank">About</a>
-		<a href="https://www.anime-expo.org/faq/" target="_blank">FAQ</a>
+		<a href="exhibitors.html">Exhibitors</a>
+		<a href="about.html">About</a>
+		<a href="faq.html">FAQ</a>
 	</nav>
 	
 	<!-- right side -->
@@ -56,7 +56,7 @@
 		<div class="carousel-item active">
 		  <img src="https://wallpaperbat.com/img/7223442-anime-girl-wallpaper-4k-girly-background-surreal-fairy.jpg" class="d-block w-100" alt="Irene Con Main">
 		  <div class="carousel-caption">
-			<h1>Welcome to Irene Con 2026</h1>
+			<h1>Welcome to Candy Con 2026</h1>
 			<p>The ultimate anime & cosplay experience</p>
 			<a href="https://www.anime-expo.org/register/" 
 				target="_blank"
@@ -116,21 +116,21 @@
 		
 		<!--card 1-->
 		<label for="attendees" class="hero-card">
-			<img src = "Attendees.png" alt = "Attendees Icon">
+			<img src="assets/Attendees.png" alt="Attendees Icon">
 			<h3 class = "stat"> 12,000+ </h3>
 			<p>Fans attended Irene Con 2025 </p>
 		</label>
 		
 		<!--card 2-->
 		<label for="vendors" class="hero-card">
-			<img src = "Vendors.png" alt = "Vendors Icon">
+			<img src="assets/Vendors.png" alt="Vendors Icon">
 			<h3 class = "stat"> 350+ </h3>
 			<p>Independent artists & vendors in Artist Alley </p>
 		</label>
 		
 		<!--card 3-->
 		<label for="events" class="hero-card">
-			<img src = "Events.png" alt = "Events Icon">
+			<img src="assets/Events.png" alt="Events Icon">
 			<h3 class = "stat"> 80+ </h3>
 			<p>Panels, performances & special guest events </p>
 		</label>
@@ -158,6 +158,24 @@
 <!-- Bootstrap JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+  const heroRadios = document.querySelectorAll('input[name="hero"]');
+  const noneRadio = document.getElementById("none");
+  let selectedHero = null;
+
+  heroRadios.forEach((radio) => {
+    if (radio.id !== "none") {
+      radio.addEventListener("click", () => {
+        if (selectedHero === radio.id) {
+          noneRadio.checked = true;
+          selectedHero = null;
+        } else {
+          selectedHero = radio.id;
+        }
+      });
+    }
+  });
+</script>
 
 </body>
 </html>

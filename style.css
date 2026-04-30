@@ -1,4 +1,4 @@
-/* Irene Wang 261096307 */
+
 
 * {box-sizing: border-box;}
 
@@ -35,6 +35,16 @@ p {
   line-height: 1.6;
 }
 
+.home-logo {
+  cursor: pointer;
+  object-fit: contain;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.home-logo:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(255, 210, 235, 0.9));
+}
 
 .carousel-caption {
 	/* dark translucent box too make the white font stand out */
@@ -332,3 +342,562 @@ p {
 	margin: 0 auto;
 	letter-spacing: 0.5px;
 }
+
+/* ==================== About Page ==================== */
+
+.about-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 230, 242, 0.25), rgba(255, 190, 220, 0.25)),
+    url("assets/about_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.about-main {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 8%;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  padding: 50px;
+  border-radius: 28px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(6px);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 70px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.about-image-area {
+  flex: 0 0 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff7fb, #ffd1e6 45%, #f7a8c8 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 18px 45px rgba(255, 160, 200, 0.45);
+  border: 5px solid rgba(255, 255, 255, 0.75);
+}
+
+.about-circle-img {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@media (max-width: 850px) {
+  .about-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 35px 25px;
+  }
+
+  .about-text h1 {
+    font-size: 52px;
+  }
+
+  .about-image-area {
+    flex: none;
+  }
+
+  .about-circle {
+    width: 230px;
+    height: 230px;
+  }
+
+  .about-circle-img {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+/* ==================== FAQ Page ==================== */
+
+.faq-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 225, 240, 0.25), rgba(90, 0, 45, 0.4)),
+    url("assets/about_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.faq-main {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 8%;
+}
+
+.faq-box {
+  width: 100%;
+  max-width: 950px;
+  padding: 45px;
+  border-radius: 28px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(6px);
+}
+
+.faq-box h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 76px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-intro {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: #fff4fa;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  background: linear-gradient(135deg, #7a0038, #c21868 50%, #ff7eb8);
+  box-shadow:
+    0 0 12px rgba(255, 210, 235, 0.75),
+    0 0 25px rgba(255, 90, 170, 0.5),
+    0 12px 28px rgba(0, 0, 0, 0.35);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 20px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  position: relative;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff7fb;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-answer {
+  margin: 0 18px 18px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  background: rgba(255, 244, 250, 0.95);
+  color: #5f1538;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 0 14px rgba(255, 150, 205, 0.35);
+}
+
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 16px rgba(255, 230, 245, 0.95),
+    0 0 34px rgba(255, 90, 170, 0.7),
+    0 14px 32px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 750px) {
+  .faq-main {
+    padding: 50px 5%;
+  }
+
+  .faq-box {
+    padding: 30px 20px;
+  }
+
+  .faq-box h1 {
+    font-size: 56px;
+  }
+
+  .faq-item summary {
+    font-size: 17px;
+    padding: 18px 48px 18px 18px;
+  }
+}
+
+/* ==================== Exhibitors Page ==================== */
+
+.exhibitors-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 225, 240, 0.25), rgba(90, 0, 45, 0.42)),
+    url("assets/about_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.exhibitors-main {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 80px 8%;
+}
+
+.exhibitors-box {
+  width: 100%;
+  max-width: 1100px;
+  padding: 45px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(6px);
+}
+
+.exhibitors-box h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 76px;
+  letter-spacing: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.exhibitors-intro {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 40px;
+  color: #fff4fa;
+}
+
+.exhibitor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 34px;
+}
+
+.exhibitor-card {
+  padding: 28px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(122, 0, 56, 0.92), rgba(194, 24, 104, 0.9), rgba(255, 126, 184, 0.85));
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 14px rgba(255, 220, 240, 0.85),
+    0 0 32px rgba(255, 90, 170, 0.55),
+    0 14px 34px rgba(0, 0, 0, 0.42);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exhibitor-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 20px rgba(255, 240, 250, 1),
+    0 0 44px rgba(255, 90, 170, 0.8),
+    0 18px 40px rgba(0, 0, 0, 0.48);
+}
+
+.exhibitor-img-wrap {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff8fc, #ffd3e8 45%, #f7a1c6 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 28px rgba(255, 170, 210, 0.55);
+}
+
+.exhibitor-img {
+  width: 155px;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.exhibitor-info h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 38px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+
+.exhibitor-tag {
+  font-weight: 700;
+  color: #ffe7f3;
+  margin-bottom: 14px;
+}
+
+.exhibitor-info p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 850px) {
+  .exhibitors-main {
+    padding: 50px 5%;
+  }
+
+  .exhibitors-box {
+    padding: 30px 20px;
+  }
+
+  .exhibitors-box h1 {
+    font-size: 54px;
+  }
+
+  .exhibitor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .exhibitor-img-wrap {
+    width: 165px;
+    height: 165px;
+  }
+
+  .exhibitor-img {
+    width: 132px;
+    height: 132px;
+  }
+}
+
+/* ==================== Programming Page ==================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.programming-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 225, 240, 0.25), rgba(90, 0, 45, 0.42)),
+    url("assets/about_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.programming-main {
+  width: 100%;
+}
+
+.schedule-section {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 8%;
+  scroll-margin-top: 90px;
+}
+
+.schedule-box {
+  width: 100%;
+  max-width: 1100px;
+  padding: 45px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 0 18px rgba(255, 220, 240, 0.6),
+    0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+.schedule-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.schedule-heading-row h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 72px;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.schedule-heading-row h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 38px;
+  letter-spacing: 2px;
+  color: #ffd9ec;
+  margin-top: 4px;
+}
+
+.day2-heading {
+  text-align: right;
+  margin-left: auto;
+}
+
+.schedule-intro {
+  margin: 20px 0 32px;
+  font-size: 18px;
+  color: #fff4fa;
+}
+
+.schedule-arrow {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: radial-gradient(circle at 35% 30%, #ffb8dc, #c21868 55%, #7a0038 100%);
+  border: 3px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 0 14px rgba(255, 230, 245, 0.95),
+    0 0 34px rgba(255, 90, 170, 0.7),
+    0 12px 28px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.schedule-arrow img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.arrow-left img {
+  transform: rotate(180deg);
+}
+
+.schedule-arrow:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 20px rgba(255, 245, 250, 1),
+    0 0 46px rgba(255, 80, 170, 0.9),
+    0 14px 34px rgba(0, 0, 0, 0.5);
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 0 14px rgba(255, 220, 240, 0.65),
+    0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  color: white;
+}
+
+.schedule-table thead {
+  background: linear-gradient(135deg, #7a0038, #c21868, #ff7eb8);
+}
+
+.schedule-table th {
+  padding: 18px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.schedule-table td {
+  padding: 17px 18px;
+  background: rgba(255, 244, 250, 0.93);
+  color: #5f1538;
+  border-bottom: 1px solid rgba(194, 24, 104, 0.25);
+}
+
+.schedule-table tbody tr:nth-child(even) td {
+  background: rgba(255, 225, 240, 0.95);
+}
+
+.schedule-table tbody tr:hover td {
+  background: #ffd4e8;
+}
+
+@media (max-width: 800px) {
+  .schedule-section {
+    padding: 55px 5%;
+  }
+
+  .schedule-box {
+    padding: 30px 20px;
+  }
+
+  .schedule-heading-row h1 {
+    font-size: 48px;
+  }
+
+  .schedule-heading-row h2 {
+    font-size: 30px;
+  }
+
+  .schedule-arrow {
+    width: 52px;
+    height: 52px;
+    font-size: 30px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
