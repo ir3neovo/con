@@ -1,0 +1,163 @@
+<!-- Irene Wang 261096307 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMP307 Assignment 2</title>
+	
+	<!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+	
+	<!-- custom CSS -->
+	<link rel="stylesheet" href="style.css">
+	
+	<link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+<header class="top-bar">
+	<!-- left side -->
+    <div class="left-section">
+        <img src="https://i.pinimg.com/originals/1c/56/d1/1c56d1e6e3f002f4109a1f59e56cf292.jpg" 
+             alt="Irene Con Logo" class="logo">
+    </div>
+
+    <nav class="main-menu">
+		<a href="https://www.anime-expo.org/programming/" target="_blank">Programming</a>
+		<a href="https://fanexpohq.com/exhibitors/" target="_blank">Exhibitors</a>
+		<a href="https://www.comiccon.org/contact/" target="_blank">About</a>
+		<a href="https://www.anime-expo.org/faq/" target="_blank">FAQ</a>
+	</nav>
+	
+	<!-- right side -->
+	<div class = "utility-menu">
+		<span class = "utility-item">Contact Us</span>
+		<span class = "utility-item">Log In</span>
+		<button class="utility-button">Sign Up</button>
+	</div>
+</header>
+
+<!-- carousel replaces blue area of fig1 -->
+<div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+
+	<div class="carousel-indicators">
+		<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+		<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+		<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+	</div>
+
+	<div class="carousel-inner">
+		<!-- slide 1 -->
+		<div class="carousel-item active">
+		  <img src="https://wallpaperbat.com/img/7223442-anime-girl-wallpaper-4k-girly-background-surreal-fairy.jpg" class="d-block w-100" alt="Irene Con Main">
+		  <div class="carousel-caption">
+			<h1>Welcome to Irene Con 2026</h1>
+			<p>The ultimate anime & cosplay experience</p>
+			<a href="https://www.anime-expo.org/register/" 
+				target="_blank"
+				class="btn btn-danger btn-lg">
+				Buy Tickets
+			</a>
+		  </div>
+		</div>
+		
+		<!-- slide 2 -->
+		<div class="carousel-item">
+		  <img src="https://wallpaperbat.com/img/7223997-anime-girl-8k-ultra-hd-wallpaper.jpg" class="d-block w-100" alt="Slide 2">
+		  <div class="carousel-caption">
+			<h2 class="hero-text">Random Dance Party</h2>
+			<p>Nominate your favorite K-pop & anime tracks!</p>
+			<a href="https://open.spotify.com/playlist/37i9dQZF1DX1tyCD9QhIWF"
+				target="_blank"
+				class="btn btn-warning btn-lg">
+				Nominate Playlist
+			</a>
+		  </div>
+		</div>
+		
+		<!-- slide 3 -->
+		<div class="carousel-item">
+		  <img src="https://wallpaperbat.com/img/7223920-anime-girl-wallpaper.jpg" class="d-block w-100" alt="Slide 3">
+		  <div class="carousel-caption">
+			<h2 class="hero-text">Artist Alley</h2>
+			<p>Showcase your art and merch to thousands of fans.</p>
+			<a href="https://www.deviantart.com/"
+				target="_blank"
+				class="btn btn-success btn-lg">
+				Sign Up as Vendor
+			</a>
+		  </div>
+		</div>
+	</div>
+  
+
+ <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+   <span class="carousel-control-prev-icon"></span>
+ </button>
+
+ <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+   <span class="carousel-control-next-icon"></span>
+ </button>
+
+</div>
+
+<div class="hero-wrapper">
+	<input type="radio" name="hero" id="none" checked>
+	<input type="radio" name="hero" id="attendees">
+	<input type="radio" name="hero" id="vendors">
+	<input type="radio" name="hero" id="events">
+
+	<section class = "hero-cards">
+		
+		<!--card 1-->
+		<label for="attendees" class="hero-card">
+			<img src = "Attendees.png" alt = "Attendees Icon">
+			<h3 class = "stat"> 12,000+ </h3>
+			<p>Fans attended Irene Con 2025 </p>
+		</label>
+		
+		<!--card 2-->
+		<label for="vendors" class="hero-card">
+			<img src = "Vendors.png" alt = "Vendors Icon">
+			<h3 class = "stat"> 350+ </h3>
+			<p>Independent artists & vendors in Artist Alley </p>
+		</label>
+		
+		<!--card 3-->
+		<label for="events" class="hero-card">
+			<img src = "Events.png" alt = "Events Icon">
+			<h3 class = "stat"> 80+ </h3>
+			<p>Panels, performances & special guest events </p>
+		</label>
+	</section>
+
+	<section class = "accordion-section">
+		<div class = "detail" id = "attendees-detail">
+			<h3>Attendee Experience</h3>
+			<p>Meet thousands of anime fans, cosplayers, and creators from across North America. sjsdsdf sdfsdfsd sdfsdg sdfsdkj sdfsdks sdfsdfs sgsdfsd sdfsdfsd sdfsdfsdfs.</p>
+		</div>
+		
+		<div class = "detail" id = "vendors-detail">
+			<h3>Artist Alley</h3>
+			<p>Explore handmade merch, prints, collectibles, and exclusive convention items. sdfs sdfrdsg sdfsdl gsdfskdf gsrdgflsdjf gsfglskdfj agdofgowe sdivjd aoisd psdksdg osdijg sfgs.</p>
+		</div>
+		
+		<div class = "detail" id = "events-detail">
+			<h3>Panels & Performances</h3>
+			<p>Enjoy live performances, cosplay contests, guest Q&As, and more. sdfs sdfrdsg sdfsdl gsdfskdf gsrdgflsdjf gsfglskdfj agdofgowe sdivjd aoisd psdksdg osdijg sfgs.</p>
+		</div>
+	</section>
+
+</div>
+
+<!-- Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
