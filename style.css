@@ -159,31 +159,80 @@ p {
 	transform: scale(1.05);
 }
 
+* {
+  box-sizing: border-box;
+}
 
-/* tablet*/
-@media (max-width: 1024px) {
+img {
+  max-width: 100%;
+}
 
-	.main-container {
-		flex-direction: column;
-	}
+/* Tablets / small laptops */
+@media (max-width: 900px) {
+  .top-bar {
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 14px 5%;
+  }
 
-	.left, .content, .right {
-		width: 100%;
-	}
+  .left-section {
+    flex: 0 0 auto;
+  }
 
-	.left {order: 1;}
-	.content {order: 2;}
-	.right {order: 3;}
-  
-  /* Header adjusts */
-	.top-header {
-		flex-direction: column;
-		gap: 10px;
-	}
+  .logo {
+    width: 58px;
+    height: 58px;
+    object-fit: cover;
+  }
 
-	.main-nav a {margin: 0 10px;}
-  
-	p{ font-size: 16px;}
+  .main-menu {
+    order: 3;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .main-menu a {
+    font-size: 16px;
+  }
+
+  .utility-menu {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .utility-item {
+    font-size: 14px;
+  }
+
+  .utility-button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  .carousel-item img {
+    height: 60vh;
+    object-fit: cover;
+  }
+
+  .carousel-caption h1,
+  .carousel-caption .hero-text {
+    font-size: 44px;
+  }
+
+  .carousel-caption p {
+    font-size: 18px;
+  }
+
+  .hero-cards {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 24px;
+    padding: 40px 6%;
+  }
 }
 
 /* mobile */
@@ -871,6 +920,197 @@ html {
   background: #ffd4e8;
 }
 
+/* ==================== Contact Page ==================== */
+
+.contact-page {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(rgba(255, 225, 240, 0.25), rgba(90, 0, 45, 0.42)),
+    url("assets/about_bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+.contact-main {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 8%;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 1150px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  overflow: hidden;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(7px);
+  box-shadow:
+    0 0 18px rgba(255, 220, 240, 0.75),
+    0 0 40px rgba(255, 90, 170, 0.45),
+    0 18px 45px rgba(0, 0, 0, 0.48);
+}
+
+.contact-left-panel {
+  min-height: 650px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(135deg, rgba(122, 0, 56, 0.9), rgba(194, 24, 104, 0.78), rgba(255, 126, 184, 0.65));
+}
+
+.contact-left-panel h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 78px;
+  line-height: 0.9;
+  letter-spacing: 3px;
+  margin-bottom: 28px;
+  color: white;
+  text-shadow: 0 0 16px rgba(255, 230, 245, 0.65);
+}
+
+.contact-info-box {
+  padding: 24px;
+  border-radius: 22px;
+  background: rgba(255, 244, 250, 0.16);
+  border: 1.5px solid rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 0 18px rgba(255, 210, 235, 0.25);
+}
+
+.contact-info-box p {
+  margin-bottom: 16px;
+  line-height: 1.65;
+  color: #fff7fb;
+}
+
+.contact-info-box p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 35% 30%, #fff7fb, #ffd1e6 45%, #f7a8c8 100%);
+  color: #7a0038;
+  font-size: 18px;
+  box-shadow: 0 0 14px rgba(255, 230, 245, 0.8);
+}
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contact-item a:hover {
+  color: #ffe0ef;
+  text-shadow: 0 0 10px rgba(255, 230, 245, 0.9);
+}
+
+.contact-right-panel {
+  padding: 48px;
+  background: rgba(255, 244, 250, 0.92);
+}
+
+.contact-right-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-right-panel input,
+.contact-right-panel select,
+.contact-right-panel textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 2px solid rgba(194, 24, 104, 0.35);
+  background: white;
+  color: #5f1538;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 4px 14px rgba(194, 24, 104, 0.12);
+}
+
+.contact-right-panel input:focus,
+.contact-right-panel select:focus,
+.contact-right-panel textarea:focus {
+  border-color: #c21868;
+  box-shadow:
+    0 0 0 4px rgba(255, 126, 184, 0.25),
+    0 0 18px rgba(255, 90, 170, 0.28);
+}
+
+.contact-right-panel textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-right-panel button {
+  margin-top: 6px;
+  padding: 15px 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #7a0038, #c21868, #ff7eb8);
+  color: white;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  box-shadow:
+    0 0 14px rgba(255, 210, 235, 0.8),
+    0 10px 24px rgba(122, 0, 56, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-right-panel button:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 20px rgba(255, 235, 248, 1),
+    0 12px 28px rgba(122, 0, 56, 0.45);
+}
+
+.contact-success {
+  display: none;
+  margin: 6px 0 0;
+  color: #7a0038;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-success.show-success {
+  display: block;
+}
+
+
 @media (max-width: 800px) {
   .schedule-section {
     padding: 55px 5%;
@@ -898,6 +1138,23 @@ html {
   .schedule-table td {
     padding: 14px;
     font-size: 14px;
+  }
+
+  .contact-main {
+    padding: 60px 5%;
+  }
+
+  .contact-card {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-left-panel {
+    min-height: auto;
+    gap: 34px;
+  }
+
+  .contact-left-panel h1 {
+    font-size: 62px;
   }
 }
 
